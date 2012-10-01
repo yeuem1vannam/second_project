@@ -3,9 +3,11 @@ SecondProject::Application.routes.draw do
 
   match '/', to: 'pages#home'
 
-  match 'help', to: 'pages#help'
+  match '/home', to: 'pages#home'
 
-  match 'contact', to: 'pages#contact'
+  match '/help', to: 'pages#help'
+
+  match '/contact', to: 'pages#contact'
 
 
   # get "pages/home"
