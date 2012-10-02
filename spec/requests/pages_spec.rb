@@ -12,7 +12,8 @@ describe "Pages" do
 
   describe "Home page" do
     before { visit root_path }
-
-    it { should have_selector('title', :text => "Home") }
+   
+    it { should have_selector('title', text: full_title('') ) }
+    it { should have_selector('title', text: '| Home') }
   end
 end

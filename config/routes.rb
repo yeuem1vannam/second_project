@@ -9,7 +9,7 @@ SecondProject::Application.routes.draw do
 
   match '/contact', to: 'pages#contact'
 
-
+  match '/about', to: 'pages#about'
   # get "pages/home"
 
   #get "pages/help"
