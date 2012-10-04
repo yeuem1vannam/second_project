@@ -9,9 +9,7 @@
 #  updated_at :datetime         not null
 #  username   :string(255)
 #
-
 require 'spec_helper'
-
 describe User do
 
   before do
