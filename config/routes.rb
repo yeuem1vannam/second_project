@@ -14,6 +14,8 @@ SecondProject::Application.routes.draw do
   match '/about', to: 'pages#about'
 
   match '/signup', to: 'users#new'
+
+  resources :users
   # get "pages/home"
 
   #get "pages/help"
