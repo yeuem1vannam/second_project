@@ -1,5 +1,5 @@
 require 'spec_helper'
-
+include SessionsHelper
 describe "Users" do
   subject { page }
   describe "GET /users" do
@@ -36,13 +36,14 @@ describe "Users" do
       end
     end
     describe " with valid information" do
-      before do
-        fill_in "Username", with: "example"
-        fill_in "Name", with: "Example User"
-        fill_in "Email", with: "user@example.com"
-        fill_in "Password", with: "123456"
-        fill_in "Confirmation password", with: "123456"
-      end
+#      before do
+#        fill_in "Username", with: "example"
+#        fill_in "Name", with: "Example User"
+#        fill_in "Email", with: "user@example.com"
+#        fill_in "Password", with: "123456"
+#        fill_in "Confirmation password", with: "123456"
+#      end
+      before { valid_signup }
       it " should create an user" do
         expect { click_button submit }.to change(User, :count).by(1)
       end
